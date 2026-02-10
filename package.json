@@ -1,0 +1,12 @@
+{
+  "name": "dino-runner",
+  "version": "1.0.0",
+  "description": "A portable pixel art dino runner game",
+  "main": "src/game.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Graham",
+  "license": "MIT"
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🦖 DINO RUNNER 🦖</h1>
+    <div id="title-screen">
+        <div id="high-score-display">High Score: 0</div>
+        <div id="character-select">
+            <h3>Select Character</h3>
+            <div class="character-grid">
+            </div>
+        </div>
+        <button id="start-game" style="display: none;">Select a character to start!</button>
+        <div class="menu-buttons">
+            <button class="menu-button" id="achievements-btn">View Achievements</button>
+            <button class="menu-button" id="leaderboard-btn">View Leaderboard</button>
+        </div>
+    </div>
+    <div id="game-container" style="display: none;">
+        <p>Press SPACEBAR to jump!</p>
+        <div id="game-area">
+            <div class="bg-layer bg-sky"></div>
+            <div class="bg-layer bg-clouds"></div>
+            <div class="bg-layer bg-night"></div>
+            <div id="dino"></div>
+            <div id="obstacle"></div>
+            <div id="milestone-popup">
+                <div class="milestone-score">🎉 100 POINTS! 🎉</div>
+                <div class="milestone-message">Keep going!</div>
+            </div>
+            <div id="game-overlay">
+                <div class="game-over-text">GAME OVER</div>
+                <div class="game-over-score">Score: 0</div>
+                <div class="game-over-message">Press SPACE to play again</div>
+            </div>
+        </div>
+        <div id="score">Score: 0</div>
+        <button id="back-to-menu" style="display: none;">Back to Menu</button>
+    </div>
+    <div id="credits">Created by Jacob Graham © 2025</div>
+    <button id="reset-save-btn" class="reset-save-btn">
+        <span style="font-size: 12px;">🗑️</span> RESET
+    </button>
+    <div id="reset-confirm-modal" class="reset-confirm-modal">
+        <h3>Reset Game Progress?</h3>
+        <p>This will delete all your achievements, unlocked characters, and high scores. This cannot be undone!</p>
+        <div class="reset-confirm-buttons">
+            <button class="reset-confirm-btn reset-confirm-yes">Yes, Reset Everything</button>
+            <button class="reset-confirm-btn reset-confirm-no">No, Keep Progress</button>
+        </div>
+    </div>
+
+    <div id="achievements-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <h2>Achievements</h2>
+            <div id="achievements-list" class="achievement-list">
+            </div>
+        </div>
+    </div>
+
+    <div id="leaderboard-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <h2>Leaderboard</h2>
+            <div id="modal-leaderboard-list" class="score-list">
+            </div>
+        </div>
+    </div>
+
+    <div id="character-unlock-popup" class="character-unlock-popup">
+        <h3>New Character Unlocked!</h3>
+        <div class="character-icon"></div>
+        <p class="character-name"></p>
+        <p class="character-hint">Check the character select screen</p>
+    </div>
+
+    <div id="achievement-popup" class="achievement-popup">
+        <h3>Achievement Unlocked!</h3>
+        <p class="achievement-name"></p>
+        <p class="achievement-description"></p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
